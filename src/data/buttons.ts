@@ -65,6 +65,27 @@ import PlayButton from "@/components/buttons/PlayButton";
 import HamburgerMenuButton from "@/components/buttons/HamburgerMenuButton";
 import FavoriteButton from "@/components/buttons/FavoriteButton";
 
+// New Special Effects Buttons
+import GlassShineButton from "@/components/buttons/GlassShineButton";
+import PulseEffectButton from "@/components/buttons/PulseEffectButton";
+import GlitchButton from "@/components/buttons/GlitchButton";
+import MagneticButton from "@/components/buttons/MagneticButton";
+import ThreeDTiltButton from "@/components/buttons/ThreeDTiltButton";
+
+// New Shape Variations Buttons
+import RoundedPillButton from "@/components/buttons/RoundedPillButton";
+import CircleIconButton from "@/components/buttons/CircleIconButton";
+import SquareIconButton from "@/components/buttons/SquareIconButton";
+import DiamondButton from "@/components/buttons/DiamondButton";
+import HexagonButton from "@/components/buttons/HexagonButton";
+
+// New Theme-Specific Buttons
+import DarkModeButton from "@/components/buttons/DarkModeButton";
+import LightModeButton from "@/components/buttons/LightModeButton";
+import GlassDarkButton from "@/components/buttons/GlassDarkButton";
+import RetroPixelButton from "@/components/buttons/RetroPixelButton";
+import CyberpunkButton from "@/components/buttons/CyberpunkButton";
+
 export interface ButtonData {
   id: string;
   slug: string;
@@ -94,7 +115,9 @@ export const buttonCategories = [
   "Minimal",
   "Creative",
   "Mobile",
-  "Utility"
+  "Utility",
+  "Special Effects",
+  "Theme-Specific"
 ];
 
 export const buttonsData: ButtonData[] = [
@@ -895,6 +918,219 @@ export const buttonsData: ButtonData[] = [
     </span>
     <span>{isFavorited ? 'Favorited' : 'Favorite'}</span>
   </span>
+</button>`
+  },
+
+  // New Special Effects Buttons
+  {
+    id: "61",
+    slug: "glass-shine-button",
+    title: "Glass Shine Button",
+    description: "Glassmorphism button with animated shine effect sweeping across on hover.",
+    category: "Special Effects",
+    tags: ["glass", "shine", "animation", "sweep"],
+    component: GlassShineButton,
+    code: `<button className="px-6 py-3 bg-gradient-to-r from-blue-500/80 to-purple-500/80 backdrop-blur-sm text-white rounded-lg relative overflow-hidden group transition-all hover:from-blue-600/80 hover:to-purple-600/80">
+  <span className="relative z-10">Click Me</span>
+  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12"></div>
+</button>`
+  },
+  {
+    id: "62",
+    slug: "pulse-effect-button",
+    title: "Pulse Effect Button",
+    description: "Button with layered pulsing animations for attention-grabbing effects.",
+    category: "Special Effects",
+    tags: ["pulse", "ping", "attention", "layered"],
+    component: PulseEffectButton,
+    code: `<button className="px-6 py-3 bg-emerald-500 text-white rounded-lg relative overflow-hidden transition-all hover:bg-emerald-600">
+  <span className="relative z-10">Click Me</span>
+  <div className="absolute inset-0 bg-emerald-400 opacity-0 animate-ping rounded-lg"></div>
+  <div className="absolute inset-0 bg-emerald-300 opacity-0 animate-pulse rounded-lg animation-delay-150"></div>
+</button>`
+  },
+  {
+    id: "63",
+    slug: "glitch-button",
+    title: "Glitch Button",
+    description: "Cyberpunk-style button with glitch effects and digital distortion.",
+    category: "Special Effects",
+    tags: ["glitch", "cyberpunk", "digital", "distortion"],
+    component: GlitchButton,
+    code: `<button className="px-6 py-3 bg-black text-green-400 rounded-lg relative overflow-hidden group font-mono border border-green-400/30 hover:bg-gray-900 transition-all">
+  <span className="relative z-10 group-hover:animate-pulse">Click Me</span>
+  <div className="absolute inset-0 bg-red-500 opacity-0 group-hover:opacity-20 animate-pulse duration-75"></div>
+  <div className="absolute top-0 left-0 w-full h-0.5 bg-cyan-400 opacity-0 group-hover:opacity-100 animate-bounce"></div>
+  <div className="absolute bottom-0 right-0 w-full h-0.5 bg-magenta-400 opacity-0 group-hover:opacity-100 animate-bounce animation-delay-100"></div>
+</button>`
+  },
+  {
+    id: "64",
+    slug: "magnetic-button",
+    title: "Magnetic Button",
+    description: "Button that appears to be magnetically attracted to cursor with smooth following motion.",
+    category: "Special Effects",
+    tags: ["magnetic", "cursor", "following", "attraction"],
+    component: MagneticButton,
+    code: `<button className="px-6 py-3 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-lg transition-all duration-300 transform hover:scale-110 hover:rotate-1 shadow-lg hover:shadow-purple-500/50 group">
+  <span className="relative z-10 transition-all group-hover:translate-x-1 group-hover:-translate-y-0.5">Click Me</span>
+  <div className="absolute inset-0 bg-gradient-to-br from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+</button>`
+  },
+  {
+    id: "65",
+    slug: "3d-tilt-button",
+    title: "3D Tilt Button",
+    description: "Advanced 3D button with perspective tilt effects on hover.",
+    category: "Special Effects",
+    tags: ["3d", "tilt", "perspective", "hover"],
+    component: ThreeDTiltButton,
+    code: `<button 
+  className="px-6 py-3 bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-lg transition-all duration-300 transform hover:rotate-x-12 hover:rotate-y-12 shadow-xl hover:shadow-2xl"
+  style={{
+    perspective: '1000px',
+    transformStyle: 'preserve-3d'
+  }}
+>
+  <span className="relative z-10">Click Me</span>
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg transform translate-z-2"></div>
+</button>`
+  },
+
+  // New Shape Variations Buttons
+  {
+    id: "66",
+    slug: "rounded-pill-button",
+    title: "Rounded Pill Button",
+    description: "Fully rounded pill-shaped button with gradient background.",
+    category: "Shape",
+    tags: ["pill", "rounded", "gradient", "smooth"],
+    component: RoundedPillButton,
+    code: `<button className="px-8 py-3 bg-gradient-to-r from-teal-400 to-cyan-500 text-white rounded-full hover:from-teal-500 hover:to-cyan-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+  Click Me
+</button>`
+  },
+  {
+    id: "67",
+    slug: "circle-icon-button",
+    title: "Circle Icon Button",
+    description: "Perfect circle button designed for icons and single actions.",
+    category: "Shape",
+    tags: ["circle", "icon", "perfect", "action"],
+    component: CircleIconButton,
+    code: `<button className="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-600 text-white rounded-full hover:from-rose-600 hover:to-pink-700 transition-all transform hover:scale-110 flex items-center justify-center shadow-lg hover:shadow-xl">
+  <span className="text-xl">✨</span>
+</button>`
+  },
+  {
+    id: "68",
+    slug: "square-icon-button",
+    title: "Square Icon Button",
+    description: "Perfect square button with rotation effect and icon support.",
+    category: "Shape",
+    tags: ["square", "icon", "rotation", "geometric"],
+    component: SquareIconButton,
+    code: `<button className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 text-white hover:from-amber-600 hover:to-orange-700 transition-all transform hover:rotate-45 flex items-center justify-center shadow-lg hover:shadow-xl">
+  <span className="text-xl transform hover:-rotate-45 transition-transform">⚡</span>
+</button>`
+  },
+  {
+    id: "69",
+    slug: "diamond-button",
+    title: "Diamond Button",
+    description: "Diamond-shaped button created with CSS transforms and rotation effects.",
+    category: "Shape",
+    tags: ["diamond", "rotate", "transform", "unique"],
+    component: DiamondButton,
+    code: `<button className="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-600 text-white transform rotate-45 hover:rotate-0 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl">
+  <span className="transform -rotate-45 hover:rotate-0 transition-transform duration-300 text-sm font-bold">CLICK</span>
+</button>`
+  },
+  {
+    id: "70",
+    slug: "hexagon-button",
+    title: "Hexagon Button",
+    description: "Hexagonal button using CSS clip-path for unique polygon shape.",
+    category: "Shape",
+    tags: ["hexagon", "polygon", "clip-path", "geometric"],
+    component: HexagonButton,
+    code: `<button 
+  className="w-16 h-14 bg-gradient-to-br from-indigo-500 to-blue-600 text-white hover:from-indigo-600 hover:to-blue-700 transition-all transform hover:scale-110 flex items-center justify-center text-xs font-bold shadow-lg hover:shadow-xl"
+  style={{
+    clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+  }}
+>
+  HEX
+</button>`
+  },
+
+  // New Theme-Specific Buttons
+  {
+    id: "71",
+    slug: "dark-mode-button",
+    title: "Dark Mode Button",
+    description: "Button specifically designed and optimized for dark theme interfaces.",
+    category: "Theme-Specific",
+    tags: ["dark", "theme", "mode", "optimized"],
+    component: DarkModeButton,
+    code: `<button className="px-6 py-3 bg-gray-800 text-gray-100 rounded-lg border border-gray-700 hover:bg-gray-700 hover:border-gray-600 transition-all shadow-lg hover:shadow-gray-900/50">
+  <span className="flex items-center space-x-2">
+    <span>🌙</span>
+    <span>Dark Mode</span>
+  </span>
+</button>`
+  },
+  {
+    id: "72",
+    slug: "light-mode-button",
+    title: "Light Mode Button",
+    description: "Clean button designed specifically for light theme interfaces.",
+    category: "Theme-Specific",
+    tags: ["light", "theme", "mode", "clean"],
+    component: LightModeButton,
+    code: `<button className="px-6 py-3 bg-white text-gray-800 rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all shadow-lg hover:shadow-gray-200/50">
+  <span className="flex items-center space-x-2">
+    <span>☀️</span>
+    <span>Light Mode</span>
+  </span>
+</button>`
+  },
+  {
+    id: "73",
+    slug: "glass-dark-button",
+    title: "Glass Dark Button",
+    description: "Dark-tinted glassmorphism button perfect for dark backgrounds.",
+    category: "Theme-Specific",
+    tags: ["glass", "dark", "tinted", "glassmorphism"],
+    component: GlassDarkButton,
+    code: `<button className="px-6 py-3 bg-black/20 backdrop-blur-lg border border-white/10 text-white rounded-lg hover:bg-black/30 hover:border-white/20 transition-all shadow-xl">
+  <span className="relative z-10">Dark Glass</span>
+  <div className="absolute inset-0 bg-gradient-to-br from-gray-800/30 to-black/30 rounded-lg"></div>
+</button>`
+  },
+  {
+    id: "74",
+    slug: "retro-pixel-button",
+    title: "Retro Pixel Button",
+    description: "Enhanced 8-bit pixel art style button with authentic retro gaming aesthetics.",
+    category: "Theme-Specific",
+    tags: ["retro", "pixel", "8bit", "gaming"],
+    component: RetroPixelButton,
+    code: `<button className="px-6 py-3 bg-lime-400 text-black rounded border-4 border-lime-600 shadow-[4px_4px_0px_0px_rgba(101,163,13,1)] hover:shadow-[2px_2px_0px_0px_rgba(101,163,13,1)] hover:translate-x-1 hover:translate-y-1 transition-all font-mono text-sm font-bold uppercase tracking-wider">
+  PIXEL BUTTON
+</button>`
+  },
+  {
+    id: "75",
+    slug: "cyberpunk-button",
+    title: "Cyberpunk Button",
+    description: "Futuristic cyberpunk button with neon glow effects and bold typography.",
+    category: "Theme-Specific",
+    tags: ["cyberpunk", "neon", "futuristic", "glow"],
+    component: CyberpunkButton,
+    code: `<button className="px-6 py-3 bg-black text-cyan-400 rounded border border-cyan-400 hover:bg-cyan-400 hover:text-black transition-all font-mono font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.8)] relative overflow-hidden group">
+  <span className="relative z-10">CYBERPUNK</span>
+  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 </button>`
   }
 ];
