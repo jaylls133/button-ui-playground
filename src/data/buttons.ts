@@ -26,7 +26,6 @@ import MaterialButton from "@/components/buttons/MaterialButton";
 import MinimalButton from "@/components/buttons/MinimalButton";
 import GradientBorderButton from "@/components/buttons/GradientBorderButton";
 import FloatingButton from "@/components/buttons/FloatingButton";
-
 import SoftButton from "@/components/buttons/SoftButton";
 import BorderlessButton from "@/components/buttons/BorderlessButton";
 import ElevatedButton from "@/components/buttons/ElevatedButton";
@@ -43,6 +42,28 @@ import FabButton from "@/components/buttons/FabButton";
 import OutlinedButton from "@/components/buttons/OutlinedButton";
 import TextButton from "@/components/buttons/TextButton";
 import LinkButton from "@/components/buttons/LinkButton";
+
+// New Creative Styles
+import PaintSplashButton from "@/components/buttons/PaintSplashButton";
+import SketchButton from "@/components/buttons/SketchButton";
+import LiquidButton from "@/components/buttons/LiquidButton";
+import PaperFoldButton from "@/components/buttons/PaperFoldButton";
+import EmojiButton from "@/components/buttons/EmojiButton";
+
+// New Mobile UI-Friendly Buttons
+import LargeThumbButton from "@/components/buttons/LargeThumbButton";
+import FABButton from "@/components/buttons/FABButton";
+import SwipeToConfirmButton from "@/components/buttons/SwipeToConfirmButton";
+import StickyBottomButton from "@/components/buttons/StickyBottomButton";
+import ToggleSwitchButton from "@/components/buttons/ToggleSwitchButton";
+
+// New Utility Buttons
+import DownloadButton from "@/components/buttons/DownloadButton";
+import SocialMediaButton from "@/components/buttons/SocialMediaButton";
+import AddToCartButton from "@/components/buttons/AddToCartButton";
+import PlayButton from "@/components/buttons/PlayButton";
+import HamburgerMenuButton from "@/components/buttons/HamburgerMenuButton";
+import FavoriteButton from "@/components/buttons/FavoriteButton";
 
 export interface ButtonData {
   id: string;
@@ -70,7 +91,10 @@ export const buttonCategories = [
   "Shape",
   "Retro",
   "Material",
-  "Minimal"
+  "Minimal",
+  "Creative",
+  "Mobile",
+  "Utility"
 ];
 
 export const buttonsData: ButtonData[] = [
@@ -613,6 +637,264 @@ export const buttonsData: ButtonData[] = [
     component: LinkButton,
     code: `<button className="px-2 py-1 text-blue-600 hover:text-blue-800 transition-colors border-b border-transparent hover:border-blue-600">
   Click Me
+</button>`
+  },
+
+  // New Creative Styles
+  {
+    id: "45",
+    slug: "paint-splash-button",
+    title: "Paint Splash Button",
+    description: "Creative button with random paint splash effects on hover.",
+    category: "Creative",
+    tags: ["paint", "splash", "creative", "artistic"],
+    component: PaintSplashButton,
+    code: `<button className="px-6 py-3 bg-blue-500 text-white rounded-lg relative overflow-hidden group transition-all hover:bg-blue-600">
+  <span className="relative z-10">Click Me</span>
+  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
+    <div className="absolute top-2 left-3 w-3 h-3 bg-yellow-300 rounded-full animate-ping"></div>
+    <div className="absolute bottom-3 right-4 w-2 h-2 bg-pink-300 rounded-full animate-ping animation-delay-100"></div>
+    <div className="absolute top-4 right-2 w-4 h-4 bg-green-300 rounded-full animate-ping animation-delay-200"></div>
+  </div>
+</button>`
+  },
+  {
+    id: "46",
+    slug: "sketch-button",
+    title: "Sketch Button",
+    description: "Hand-drawn sketch style button with dashed borders and playful font.",
+    category: "Creative",
+    tags: ["sketch", "hand-drawn", "artistic", "dashed"],
+    component: SketchButton,
+    code: `<button className="px-6 py-3 bg-white text-gray-800 rounded-none border-2 border-gray-800 relative transform hover:rotate-1 transition-all" 
+        style={{
+          borderStyle: 'dashed',
+          boxShadow: '3px 3px 0px #000',
+          fontFamily: 'Comic Sans MS, cursive'
+        }}>
+  <span className="relative">Click Me</span>
+  <div className="absolute -top-1 -right-1 w-2 h-2 border border-gray-800 rounded-full bg-white"></div>
+</button>`
+  },
+  {
+    id: "47",
+    slug: "liquid-button",
+    title: "Liquid Button",
+    description: "Water-like morphing button with fluid animation effects.",
+    category: "Creative",
+    tags: ["liquid", "fluid", "morph", "water"],
+    component: LiquidButton,
+    code: `<button className="px-6 py-3 bg-cyan-400 text-white rounded-full relative overflow-hidden group transition-all duration-500 hover:bg-cyan-500 transform hover:scale-110">
+  <span className="relative z-10">Click Me</span>
+  <div className="absolute inset-0 bg-gradient-to-r from-cyan-300 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"></div>
+  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
+</button>`
+  },
+  {
+    id: "48",
+    slug: "paper-fold-button",
+    title: "Paper Fold Button",
+    description: "Realistic folded paper button with corner fold effect.",
+    category: "Creative",
+    tags: ["paper", "fold", "realistic", "corner"],
+    component: PaperFoldButton,
+    code: `<button className="px-6 py-3 bg-gray-100 text-gray-800 relative group transition-all duration-300 hover:bg-gray-200"
+        style={{
+          clipPath: 'polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%)',
+          boxShadow: 'inset -2px -2px 4px rgba(0,0,0,0.1)'
+        }}>
+  <span className="relative">Click Me</span>
+  <div className="absolute top-0 right-0 w-4 h-4 bg-gray-300 transform rotate-45 translate-x-2 -translate-y-2 group-hover:bg-gray-400 transition-colors"></div>
+</button>`
+  },
+  {
+    id: "49",
+    slug: "emoji-button",
+    title: "Emoji Button",
+    description: "Fun button combining text with animated emoji for personality.",
+    category: "Creative",
+    tags: ["emoji", "fun", "animated", "personality"],
+    component: EmojiButton,
+    code: `<button className="px-6 py-3 bg-gradient-to-r from-pink-400 to-purple-500 text-white rounded-lg hover:from-pink-500 hover:to-purple-600 transition-all transform hover:scale-105 flex items-center space-x-2">
+  <span>Click Me</span>
+  <span className="text-xl animate-bounce">🚀</span>
+</button>`
+  },
+
+  // New Mobile UI-Friendly Buttons
+  {
+    id: "50",
+    slug: "large-thumb-button",
+    title: "Large Thumb Button",
+    description: "Extra large button designed for easy thumb tapping on mobile devices.",
+    category: "Mobile",
+    tags: ["large", "thumb", "mobile", "accessible"],
+    component: LargeThumbButton,
+    code: `<button className="px-12 py-6 bg-blue-500 text-white rounded-2xl text-xl font-semibold hover:bg-blue-600 transition-all transform active:scale-95 shadow-lg min-h-[80px] min-w-[200px]">
+  Tap Me
+</button>`
+  },
+  {
+    id: "51",
+    slug: "fab-mobile-button",
+    title: "Mobile FAB Button",
+    description: "Floating Action Button optimized for mobile interfaces.",
+    category: "Mobile",
+    tags: ["fab", "floating", "mobile", "icon"],
+    component: FABButton,
+    code: `<button className="w-14 h-14 bg-red-500 text-white rounded-full shadow-2xl hover:shadow-3xl hover:bg-red-600 transition-all transform hover:scale-110 flex items-center justify-center text-2xl font-light">
+  +
+</button>`
+  },
+  {
+    id: "52",
+    slug: "swipe-to-confirm-button",
+    title: "Swipe to Confirm Button",
+    description: "Interactive button requiring drag gesture to activate.",
+    category: "Mobile",
+    tags: ["swipe", "confirm", "drag", "gesture"],
+    component: SwipeToConfirmButton,
+    code: `<div className="relative w-64 h-12 bg-gray-200 rounded-full overflow-hidden group">
+  <div className="absolute inset-y-1 left-1 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold cursor-pointer group-hover:translate-x-52 transition-transform duration-300">
+    →
+  </div>
+  <div className="flex items-center justify-center h-full text-gray-600 font-medium">
+    Swipe to confirm
+  </div>
+</div>`
+  },
+  {
+    id: "53",
+    slug: "sticky-bottom-button",
+    title: "Sticky Bottom Button",
+    description: "Full-width button that sticks to the bottom of the screen.",
+    category: "Mobile",
+    tags: ["sticky", "bottom", "full-width", "fixed"],
+    component: StickyBottomButton,
+    code: `<button className="w-full px-6 py-4 bg-green-500 text-white font-semibold hover:bg-green-600 transition-all shadow-lg border-t border-green-600">
+  Continue
+</button>`
+  },
+  {
+    id: "54",
+    slug: "toggle-switch-button",
+    title: "Toggle Switch Button",
+    description: "iOS-style toggle switch with smooth sliding animation.",
+    category: "Mobile",
+    tags: ["toggle", "switch", "ios", "animated"],
+    component: ToggleSwitchButton,
+    code: `const [isToggled, setIsToggled] = useState(false);
+
+<button 
+  onClick={() => setIsToggled(!isToggled)}
+  className={\`relative w-16 h-8 rounded-full transition-all duration-300 \${
+    isToggled ? 'bg-blue-500' : 'bg-gray-300'
+  }\`}
+>
+  <div className={\`absolute top-1 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 \${
+    isToggled ? 'translate-x-8' : 'translate-x-1'
+  }\`}></div>
+</button>`
+  },
+
+  // New Utility Buttons
+  {
+    id: "55",
+    slug: "download-button",
+    title: "Download Button",
+    description: "Purpose-built download button with download icon and clear CTA.",
+    category: "Utility",
+    tags: ["download", "icon", "utility", "cta"],
+    component: DownloadButton,
+    code: `import { Download } from 'lucide-react';
+
+<button className="px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-all flex items-center space-x-2 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+  <Download size={20} />
+  <span>Download</span>
+</button>`
+  },
+  {
+    id: "56",
+    slug: "social-media-button",
+    title: "Social Media Button",
+    description: "Branded social media sharing button with platform icon.",
+    category: "Utility",
+    tags: ["social", "share", "facebook", "branded"],
+    component: SocialMediaButton,
+    code: `import { Facebook } from 'lucide-react';
+
+<button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all flex items-center space-x-2 transform hover:scale-105">
+  <Facebook size={20} />
+  <span>Share</span>
+</button>`
+  },
+  {
+    id: "57",
+    slug: "add-to-cart-button",
+    title: "Add to Cart Button",
+    description: "E-commerce button with shopping cart icon for product pages.",
+    category: "Utility",
+    tags: ["cart", "ecommerce", "shopping", "product"],
+    component: AddToCartButton,
+    code: `import { ShoppingCart } from 'lucide-react';
+
+<button className="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-all flex items-center space-x-2 transform hover:scale-105 shadow-md hover:shadow-lg">
+  <ShoppingCart size={20} />
+  <span>Add to Cart</span>
+</button>`
+  },
+  {
+    id: "58",
+    slug: "play-button",
+    title: "Play Button",
+    description: "Circular play button perfect for media players and video content.",
+    category: "Utility",
+    tags: ["play", "media", "video", "audio"],
+    component: PlayButton,
+    code: `import { Play } from 'lucide-react';
+
+<button className="w-16 h-16 bg-red-500 text-white rounded-full hover:bg-red-600 transition-all flex items-center justify-center transform hover:scale-110 shadow-lg hover:shadow-xl">
+  <Play size={24} fill="white" />
+</button>`
+  },
+  {
+    id: "59",
+    slug: "hamburger-menu-button",
+    title: "Hamburger Menu Button",
+    description: "Classic three-line menu button for navigation toggles.",
+    category: "Utility",
+    tags: ["menu", "hamburger", "navigation", "toggle"],
+    component: HamburgerMenuButton,
+    code: `import { Menu } from 'lucide-react';
+
+<button className="p-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-all transform hover:scale-105">
+  <Menu size={24} />
+</button>`
+  },
+  {
+    id: "60",
+    slug: "favorite-button",
+    title: "Favorite Button",
+    description: "Interactive favorite button with heart animation and state toggle.",
+    category: "Utility",
+    tags: ["favorite", "heart", "toggle", "interactive"],
+    component: FavoriteButton,
+    code: `const [isFavorited, setIsFavorited] = useState(false);
+
+<button 
+  onClick={() => setIsFavorited(!isFavorited)}
+  className={\`px-6 py-3 rounded-lg transition-all transform hover:scale-105 \${
+    isFavorited 
+      ? 'bg-red-500 text-white shadow-lg' 
+      : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+  }\`}
+>
+  <span className="flex items-center space-x-2">
+    <span className={\`text-xl \${isFavorited ? 'text-white' : 'text-red-500'}\`}>
+      {isFavorited ? '❤️' : '🤍'}
+    </span>
+    <span>{isFavorited ? 'Favorited' : 'Favorite'}</span>
+  </span>
 </button>`
   }
 ];
