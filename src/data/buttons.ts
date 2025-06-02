@@ -27,6 +27,23 @@ import MinimalButton from "@/components/buttons/MinimalButton";
 import GradientBorderButton from "@/components/buttons/GradientBorderButton";
 import FloatingButton from "@/components/buttons/FloatingButton";
 
+import SoftButton from "@/components/buttons/SoftButton";
+import BorderlessButton from "@/components/buttons/BorderlessButton";
+import ElevatedButton from "@/components/buttons/ElevatedButton";
+import PillButton from "@/components/buttons/PillButton";
+import HolographicButton from "@/components/buttons/HolographicButton";
+import SunsetButton from "@/components/buttons/SunsetButton";
+import FrostedButton from "@/components/buttons/FrostedButton";
+import CrystalButton from "@/components/buttons/CrystalButton";
+import WiggleButton from "@/components/buttons/WiggleButton";
+import MorphButton from "@/components/buttons/MorphButton";
+import PixelButton from "@/components/buttons/PixelButton";
+import VintageButton from "@/components/buttons/VintageButton";
+import FabButton from "@/components/buttons/FabButton";
+import OutlinedButton from "@/components/buttons/OutlinedButton";
+import TextButton from "@/components/buttons/TextButton";
+import LinkButton from "@/components/buttons/LinkButton";
+
 export interface ButtonData {
   id: string;
   slug: string;
@@ -403,6 +420,198 @@ export const buttonsData: ButtonData[] = [
     tags: ["floating", "fab", "scale"],
     component: FloatingButton,
     code: `<button className="px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 hover:bg-blue-600">
+  Click Me
+</button>`
+  },
+  {
+    id: "29",
+    slug: "soft-button",
+    title: "Soft Button",
+    description: "Ultra-soft button with rounded corners and gentle hover effect.",
+    category: "Flat",
+    tags: ["soft", "gentle", "rounded"],
+    component: SoftButton,
+    code: `<button className="px-6 py-3 bg-slate-100 text-slate-700 rounded-2xl hover:bg-slate-200 transition-all font-medium shadow-sm">
+  Click Me
+</button>`
+  },
+  {
+    id: "30",
+    slug: "borderless-button",
+    title: "Borderless Button",
+    description: "Clean borderless button with subtle background on hover.",
+    category: "Flat",
+    tags: ["borderless", "clean", "subtle"],
+    component: BorderlessButton,
+    code: `<button className="px-6 py-3 bg-transparent text-blue-500 hover:bg-blue-50 transition-all font-semibold">
+  Click Me
+</button>`
+  },
+  {
+    id: "31",
+    slug: "elevated-button",
+    title: "Elevated Button",
+    description: "Highly elevated button with dramatic shadow and lift effect.",
+    category: "Raised",
+    tags: ["elevated", "dramatic", "lift"],
+    component: ElevatedButton,
+    code: `<button className="px-6 py-3 bg-white text-gray-700 rounded-lg shadow-2xl hover:shadow-3xl hover:-translate-y-1 transition-all transform">
+  Click Me
+</button>`
+  },
+  {
+    id: "32",
+    slug: "pill-button",
+    title: "Pill Button",
+    description: "Pill-shaped button with rounded edges and smooth transitions.",
+    category: "Raised",
+    tags: ["pill", "rounded", "smooth"],
+    component: PillButton,
+    code: `<button className="px-8 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:shadow-xl hover:bg-blue-600 transition-all transform hover:-translate-y-0.5">
+  Click Me
+</button>`
+  },
+  {
+    id: "33",
+    slug: "holographic-button",
+    title: "Holographic Button",
+    description: "Futuristic button with holographic gradient and pulsing effect.",
+    category: "Gradient",
+    tags: ["holographic", "futuristic", "pulse"],
+    component: HolographicButton,
+    code: `<button className="px-6 py-3 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 text-white rounded-lg hover:from-cyan-500 hover:via-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 animate-pulse">
+  Click Me
+</button>`
+  },
+  {
+    id: "34",
+    slug: "sunset-button",
+    title: "Sunset Button",
+    description: "Warm sunset gradient with rotation and scale effects.",
+    category: "Gradient",
+    tags: ["sunset", "warm", "rotation"],
+    component: SunsetButton,
+    code: `<button className="px-6 py-3 bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 text-white rounded-lg hover:from-orange-500 hover:via-red-600 hover:to-pink-600 transition-all transform hover:rotate-1 hover:scale-105">
+  Click Me
+</button>`
+  },
+  {
+    id: "35",
+    slug: "frosted-button",
+    title: "Frosted Button",
+    description: "Enhanced frosted glass button with stronger blur effects.",
+    category: "Glass",
+    tags: ["frosted", "enhanced", "blur"],
+    component: FrostedButton,
+    code: `<button className="px-6 py-3 bg-white/10 backdrop-blur-xl border border-white/20 text-white rounded-xl hover:bg-white/20 hover:border-white/30 transition-all shadow-xl">
+  Click Me
+</button>`
+  },
+  {
+    id: "36",
+    slug: "crystal-button",
+    title: "Crystal Button",
+    description: "Crystal-clear button with sophisticated glass morphism design.",
+    category: "Glass",
+    tags: ["crystal", "sophisticated", "morphism"],
+    component: CrystalButton,
+    code: `<button className="px-6 py-3 bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-lg border border-white/30 text-white rounded-lg hover:from-white/30 hover:to-white/10 transition-all shadow-[0_8px_32px_rgba(255,255,255,0.1)]">
+  Click Me
+</button>`
+  },
+  {
+    id: "37",
+    slug: "wiggle-button",
+    title: "Wiggle Button",
+    description: "Playful button that wiggles on hover for fun interactions.",
+    category: "Animated",
+    tags: ["wiggle", "playful", "fun"],
+    component: WiggleButton,
+    code: `<button className="px-6 py-3 bg-yellow-500 text-white rounded-lg transition-all hover:bg-yellow-600 hover:animate-[wiggle_0.5s_ease-in-out_infinite] transform">
+  Click Me
+</button>`
+  },
+  {
+    id: "38",
+    slug: "morph-button",
+    title: "Morph Button",
+    description: "Shape-shifting button that transforms completely on hover.",
+    category: "Animated",
+    tags: ["morph", "transform", "shape"],
+    component: MorphButton,
+    code: `<button className="px-6 py-3 bg-purple-500 text-white rounded-lg transition-all duration-500 hover:bg-green-500 hover:rounded-full transform hover:rotate-180">
+  Click Me
+</button>`
+  },
+  {
+    id: "39",
+    slug: "pixel-button",
+    title: "Pixel Button",
+    description: "Retro pixel-art style button with 8-bit aesthetics.",
+    category: "Retro",
+    tags: ["pixel", "8bit", "retro"],
+    component: PixelButton,
+    code: `<button className="px-6 py-3 bg-green-400 text-black rounded border-2 border-green-600 shadow-[2px_2px_0px_0px_rgba(34,197,94,1)] hover:shadow-[1px_1px_0px_0px_rgba(34,197,94,1)] hover:translate-x-0.5 hover:translate-y-0.5 transition-all font-mono text-sm uppercase tracking-wider">
+  CLICK ME
+</button>`
+  },
+  {
+    id: "40",
+    slug: "vintage-button",
+    title: "Vintage Button",
+    description: "Classic vintage button with old-school styling and serif font.",
+    category: "Retro",
+    tags: ["vintage", "classic", "serif"],
+    component: VintageButton,
+    code: `<button className="px-6 py-3 bg-amber-600 text-amber-100 rounded border-3 border-amber-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)] hover:bg-amber-700 transition-all font-serif">
+  Click Me
+</button>`
+  },
+  {
+    id: "41",
+    slug: "fab-button",
+    title: "FAB Button",
+    description: "Material Design Floating Action Button with precise specifications.",
+    category: "Material",
+    tags: ["fab", "material", "action"],
+    component: FabButton,
+    code: `<button className="px-6 py-3 bg-blue-600 text-white rounded-md shadow-lg hover:shadow-xl hover:bg-blue-700 transition-all transform hover:-translate-y-1 uppercase tracking-widest text-xs font-bold">
+  ACTION
+</button>`
+  },
+  {
+    id: "42",
+    slug: "outlined-button",
+    title: "Outlined Button",
+    description: "Material Design outlined button with clean typography.",
+    category: "Material",
+    tags: ["outlined", "material", "typography"],
+    component: OutlinedButton,
+    code: `<button className="px-6 py-3 bg-transparent border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition-all uppercase text-sm tracking-wide">
+  Click Me
+</button>`
+  },
+  {
+    id: "43",
+    slug: "text-button",
+    title: "Text Button",
+    description: "Ultra-minimal text-only button for subtle interactions.",
+    category: "Minimal",
+    tags: ["text", "subtle", "minimal"],
+    component: TextButton,
+    code: `<button className="px-6 py-3 bg-transparent text-gray-600 hover:text-gray-900 transition-colors font-medium">
+  Click Me
+</button>`
+  },
+  {
+    id: "44",
+    slug: "link-button",
+    title: "Link Button",
+    description: "Hyperlink-style button with underline interaction.",
+    category: "Minimal",
+    tags: ["link", "underline", "hyperlink"],
+    component: LinkButton,
+    code: `<button className="px-2 py-1 text-blue-600 hover:text-blue-800 transition-colors border-b border-transparent hover:border-blue-600">
   Click Me
 </button>`
   }
