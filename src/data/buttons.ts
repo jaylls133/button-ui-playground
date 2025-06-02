@@ -52,7 +52,7 @@ import EmojiButton from "@/components/buttons/EmojiButton";
 
 // New Mobile UI-Friendly Buttons
 import LargeThumbButton from "@/components/buttons/LargeThumbButton";
-import FABButton from "@/components/buttons/FABButton";
+import MobileFABButton from "@/components/buttons/MobileFABButton";
 import SwipeToConfirmButton from "@/components/buttons/SwipeToConfirmButton";
 import StickyBottomButton from "@/components/buttons/StickyBottomButton";
 import ToggleSwitchButton from "@/components/buttons/ToggleSwitchButton";
@@ -736,12 +736,12 @@ export const buttonsData: ButtonData[] = [
   },
   {
     id: "51",
-    slug: "fab-mobile-button",
+    slug: "mobile-fab-button",
     title: "Mobile FAB Button",
     description: "Floating Action Button optimized for mobile interfaces.",
     category: "Mobile",
     tags: ["fab", "floating", "mobile", "icon"],
-    component: FABButton,
+    component: MobileFABButton,
     code: `<button className="w-14 h-14 bg-red-500 text-white rounded-full shadow-2xl hover:shadow-3xl hover:bg-red-600 transition-all transform hover:scale-110 flex items-center justify-center text-2xl font-light">
   +
 </button>`
