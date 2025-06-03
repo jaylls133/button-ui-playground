@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Copy, Github, Star } from "lucide-react";
 import { buttonsData, buttonCategories } from "@/data/buttons";
 import { toast } from "@/hooks/use-toast";
+import ThemeToggle from "@/components/ui/theme-toggle";
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -22,7 +23,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
       {/* Header */}
       <header className="bg-black/20 backdrop-blur-lg border-b border-white/10">
         <div className="container mx-auto px-6 py-6">
@@ -36,6 +37,7 @@ const Index = () => {
               </p>
             </div>
             <div className="flex items-center space-x-4">
+              <ThemeToggle />
               <button className="flex items-center space-x-2 px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-lg border border-white/20 rounded-lg text-white transition-all">
                 <Star size={16} />
                 <span>Star</span>
@@ -138,6 +140,7 @@ const Index = () => {
         <div className="container mx-auto px-6 py-8">
           <div className="text-center text-gray-400">
             <p>Built with ❤️ using React, Tailwind CSS, and shadcn/ui</p>
+            <p className="mt-2">Total Buttons: {buttonsData.length}</p>
           </div>
         </div>
       </footer>
