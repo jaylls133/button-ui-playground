@@ -86,6 +86,13 @@ import GlassDarkButton from "@/components/buttons/GlassDarkButton";
 import RetroPixelButton from "@/components/buttons/RetroPixelButton";
 import CyberpunkButton from "@/components/buttons/CyberpunkButton";
 
+// Additional Unique Design Buttons
+import BubbleButton from "@/components/buttons/BubbleButton";
+import MetallicButton from "@/components/buttons/MetallicButton";
+import LayeredButton from "@/components/buttons/LayeredButton";
+import StitchedButton from "@/components/buttons/StitchedButton";
+import ParticleButton from "@/components/buttons/ParticleButton";
+
 export interface ButtonData {
   id: string;
   slug: string;
@@ -1131,6 +1138,93 @@ export const buttonsData: ButtonData[] = [
     code: `<button className="px-6 py-3 bg-black text-cyan-400 rounded border border-cyan-400 hover:bg-cyan-400 hover:text-black transition-all font-mono font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.8)] relative overflow-hidden group">
   <span className="relative z-10">CYBERPUNK</span>
   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+</button>`
+  },
+
+  // Additional Unique Design Buttons
+  {
+    id: "76",
+    slug: "bubble-button",
+    title: "Bubble Button",
+    description: "Playful button with floating bubble effects and rounded design.",
+    category: "Creative",
+    tags: ["bubble", "playful", "floating", "creative"],
+    component: BubbleButton,
+    code: `<button className="px-6 py-3 bg-gradient-to-br from-blue-400 to-purple-500 text-white rounded-full relative overflow-hidden group transition-all hover:from-blue-500 hover:to-purple-600 transform hover:scale-105">
+  <span className="relative z-10">Click Me</span>
+  <div className="absolute top-2 left-3 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
+  <div className="absolute bottom-3 right-4 w-3 h-3 bg-white/20 rounded-full animate-bounce"></div>
+  <div className="absolute top-4 right-2 w-1.5 h-1.5 bg-white/40 rounded-full animate-ping"></div>
+</button>`
+  },
+  {
+    id: "77",
+    slug: "metallic-button",
+    title: "Metallic Button",
+    description: "Realistic metallic button with chrome-like finish and reflective effects.",
+    category: "3D",
+    tags: ["metallic", "chrome", "reflective", "realistic"],
+    component: MetallicButton,
+    code: `<button className="px-6 py-3 bg-gradient-to-b from-gray-300 via-gray-400 to-gray-500 text-gray-800 rounded-lg relative overflow-hidden group transition-all hover:from-gray-400 hover:via-gray-500 hover:to-gray-600 shadow-lg hover:shadow-xl border border-gray-400">
+  <span className="relative z-10 font-bold">Click Me</span>
+  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+  <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent rounded-lg"></div>
+</button>`
+  },
+  {
+    id: "78",
+    slug: "layered-button",
+    title: "Layered Button",
+    description: "Multi-layered button with depth and shadow stacking effects.",
+    category: "3D",
+    tags: ["layered", "depth", "stacking", "shadow"],
+    component: LayeredButton,
+    code: `<div className="relative group">
+  <button className="px-6 py-3 bg-red-500 text-white rounded-lg relative z-10 transition-all hover:bg-red-600 transform group-hover:-translate-y-1 group-hover:-translate-x-1">
+    Click Me
+  </button>
+  <div className="absolute top-1 left-1 w-full h-full bg-red-400 rounded-lg z-0 transition-all group-hover:translate-y-1 group-hover:translate-x-1"></div>
+  <div className="absolute top-2 left-2 w-full h-full bg-red-300 rounded-lg -z-10 transition-all group-hover:translate-y-2 group-hover:translate-x-2"></div>
+</div>`
+  },
+  {
+    id: "79",
+    slug: "stitched-button",
+    title: "Stitched Button",
+    description: "Fabric-inspired button with decorative stitching effects around the edges.",
+    category: "Creative",
+    tags: ["stitched", "fabric", "decorative", "handmade"],
+    component: StitchedButton,
+    code: `<button className="px-6 py-3 bg-amber-100 text-amber-800 rounded-lg border-2 border-amber-600 relative transition-all hover:bg-amber-200 hover:border-amber-700 shadow-md hover:shadow-lg">
+  <span className="relative z-10 font-semibold">Click Me</span>
+  <div className="absolute top-1 left-1 right-1 h-0.5 bg-amber-600 opacity-50"></div>
+  <div className="absolute bottom-1 left-1 right-1 h-0.5 bg-amber-600 opacity-50"></div>
+  <div className="absolute top-1 bottom-1 left-1 w-0.5 bg-amber-600 opacity-50"></div>
+  <div className="absolute top-1 bottom-1 right-1 w-0.5 bg-amber-600 opacity-50"></div>
+  <div className="absolute top-3 left-3 w-1 h-1 bg-amber-600 rounded-full"></div>
+  <div className="absolute top-3 right-3 w-1 h-1 bg-amber-600 rounded-full"></div>
+  <div className="absolute bottom-3 left-3 w-1 h-1 bg-amber-600 rounded-full"></div>
+  <div className="absolute bottom-3 right-3 w-1 h-1 bg-amber-600 rounded-full"></div>
+</button>`
+  },
+  {
+    id: "80",
+    slug: "particle-button",
+    title: "Particle Button",
+    description: "Dynamic button with particle effects that animate on hover.",
+    category: "Special Effects",
+    tags: ["particle", "dynamic", "effects", "animated"],
+    component: ParticleButton,
+    code: `<button className="px-6 py-3 bg-indigo-600 text-white rounded-lg relative overflow-hidden group transition-all hover:bg-indigo-700 transform hover:scale-105">
+  <span className="relative z-10">Click Me</span>
+  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+    <div className="absolute top-2 left-4 w-1 h-1 bg-yellow-300 rounded-full animate-ping animation-delay-0"></div>
+    <div className="absolute top-4 left-2 w-0.5 h-0.5 bg-pink-300 rounded-full animate-ping animation-delay-100"></div>
+    <div className="absolute bottom-3 left-6 w-1.5 h-1.5 bg-cyan-300 rounded-full animate-ping animation-delay-200"></div>
+    <div className="absolute top-3 right-3 w-1 h-1 bg-green-300 rounded-full animate-ping animation-delay-300"></div>
+    <div className="absolute bottom-2 right-5 w-0.5 h-0.5 bg-purple-300 rounded-full animate-ping animation-delay-400"></div>
+    <div className="absolute top-5 center w-1 h-1 bg-orange-300 rounded-full animate-ping animation-delay-500"></div>
+  </div>
 </button>`
   }
 ];
